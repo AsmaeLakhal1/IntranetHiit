@@ -1,0 +1,16 @@
+.main-header {
+    background-color:	#3c8dbc;
+}
+
+.logo-lg {
+    background-color: 	#3c8dbc;
+    color: white
+}
+
+.logo-lg:hover {
+    color: #3c8dbc;
+}
+.sidebar-toggle:hover{
+    color:  #3c8dbc
+
+}

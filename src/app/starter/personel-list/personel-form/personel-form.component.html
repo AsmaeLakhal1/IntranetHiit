@@ -1,0 +1,134 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h4>Inscrire un nouvel employé</h4>
+    
+    
+    <br>
+    <form [formGroup]="employeForm" (ngSubmit)="onSubmitForm()">
+
+      <div>
+        <div class="form-group col-xs-6">
+          <label for="username">Nom de l'utilsateur</label>
+          <input type="text" id="username" class="form-control" formControlName="username" required>
+          <label for="email">Email</label>
+          <input type="text" id="email" class="form-control" formControlName="email" required>
+
+
+          <label for="plainPasswordFirst">Mot de Passe</label>
+          <input type="password" id="plainPasswordFirst" class="form-control" formControlName="plainPasswordFirst" required>
+          <label for="plainPasswordSecond">Vérification de mot de passe</label>
+          <input type="password" id="plainPasswordSecond" class="form-control" formControlName="plainPasswordSecond" required>
+          <!-- <div [formGroup]="passwordFormGroup">
+            <div class="form-group">
+                <label for="plainPasswordFirst">Password</label>
+                <input class="form-control" type="password" name="plainPasswordFirst" formControlName="plainPasswordFirst">
+            </div>
+            <p class="bg-danger" *ngIf="passwordFormGroup.controls.plainPasswordFirst.errors?.required && passwordFormGroup.controls.plainPasswordFirst.touched">Password is required</p>
+     
+            <div class="form-group">
+                <label for="plainPasswordSecond">Repeat Password</label>
+                <input class="form-control" type="password" name="plainPasswordSecond" formControlName="plainPasswordSecond">
+            </div>
+            <p class="bg-danger" *ngIf="passwordFormGroup.controls.plainPasswordSecond.errors?.required && passwordFormGroup.controls.plainPasswordSecond.touched">Repeat password is required</p>
+            <p class="bg-danger" *ngIf="passwordFormGroup.errors?.doesMatchPassword">Password does not match</p>
+     
+        </div> -->
+
+
+
+          <label for="currentPosition">Position Actuelle</label>
+          <select id="currentPosition" class="form-control" formControlName="currentPosition">
+            <option value="developpeur">Developpeur</option>
+            <option value="referent">Referent technique</option>
+            <option value="architecte">architecte</option>
+          </select>
+
+
+          <br>
+          <button class="btn btn-primary" type="submit" [disabled]="employeForm.invalid">Enregistrer
+          </button>
+        </div>
+
+        <div class="form-group col-xs-6">
+            <label for="civility">civilité</label>
+            <select id="civility" class="form-control" formControlName="civility">
+                <option value="mme">Mme</option>
+                <option value="melle">Melle</option>
+                <option value="mr">M</option>
+                
+              </select>
+
+          <label for="cnssNumber">cnss</label>
+          <input pattern="[0-9]{9}" id="cnssNumber" class="form-control" formControlName="cnssNumber" required type= "number">
+
+          <label for="maritalStatus">Etat matrimonial</label>
+          <select id="maritalStatus" class="form-control" formControlName="maritalStatus">
+            <option value="married">Marrié</option>
+            <option value="single">Celibataire</option>
+            
+          </select>
+          
+          <label for="startDate">Date de début du travail</label>
+          <input type="date" id="startDate" class="form-control datepicker" formControlName="startDate" required>
+
+          <label for="status">Statut</label>
+          <select id="status" class="form-control" formControlName="status">
+            <option value="cdi">CDI</option>
+            <option value="cdd">CDD</option>
+            
+          </select>
+
+
+         <br> <br> <br> <a routerLink="/personel">Liste des employés</a>
+
+
+        </div>
+        <!-- <div class="form-group col-xs-12" >
+                  <label for="email">email</label>
+                  <input type="text" id="email"
+                         class="form-control" formControlName="email">
+                </div> -->
+      </div>
+      <div>
+
+      </div>
+
+
+    </form>
+  </div>
+</div>
+
+
+<!-- <div id="formulaire-responsive" class="clearfix">
+
+<div class="row" >
+    <div class="col-sm-8 col-sm-offset-2">
+      <h2>Enregistrer un nouvel employé</h2>
+      <form [formGroup]="employeForm" (ngSubmit)="onSubmitForm()">
+          <div class="rang-form">
+        <div class="form-group">
+          <label for="firstName">Prenom</label>
+          <input type="text" id="firstName"
+                 class="form-control" formControlName="firstName">
+        </div>
+      </div>
+      <div class="rang-form">
+        <div class="form-group">
+          <label for="lastName">Nom</label>
+          <input type="text" id="lastName"
+                 class="form-control" formControlName="lastName">
+        </div>
+      </div>
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="text" id="email"
+                   class="form-control" formControlName="email">
+          </div>
+        
+        <button class="btn btn-success" 
+                type="submit">Enregistrer
+        </button>
+  
+      </form>
+    </div>
+  </div> -->

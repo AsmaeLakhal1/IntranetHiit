@@ -1,9 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-starter',
   templateUrl: './starter.component.html',
-  styleUrls: ['./starter.component.css']
+  styleUrls: ['./starter.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class StarterComponent implements OnInit, OnDestroy {
 
