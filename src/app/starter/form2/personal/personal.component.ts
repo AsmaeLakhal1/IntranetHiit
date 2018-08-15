@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormDataService } from '../data/formData.service';
 import { Personal } from '../data/formData.model';
+import { Employe } from '../../../interfaces/employe.interface';
 
 @Component({
   selector: 'app-personal',
@@ -12,6 +13,7 @@ export class PersonalComponent implements OnInit {
 
   title = 'Please tell us about yourself.';
     personal: Personal;
+    employe: Employe;
     form: any;
     
     constructor(private router: Router, private formDataService: FormDataService) {

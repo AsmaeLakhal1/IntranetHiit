@@ -10,9 +10,6 @@ import { StarterContentComponent } from '../starter/starter-content/starter-cont
 import { AppComponent } from '../app.component';
 import { AccueilComponent } from '../starter/accueil/accueil.component';
 import { PersonelInformationComponent } from '../starter/personel-information/personel-information.component';
-import { More1InformationComponent } from '../starter/more1-information/more1-information.component';
-import { More2InformationComponent } from '../starter/more2-information/more2-information.component';
-import { More3InformationComponent } from '../starter/more3-information/more3-information.component';
 import { PersonalComponent } from '../starter/form2/personal/personal.component';
 import { WorkComponent } from '../starter/form2/work/work.component';
 import { AddressComponent } from '../starter/form2/address/address.component';
@@ -26,9 +23,6 @@ import { NavbarComponent } from '../starter/form2/navbar/navbar.component';
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: AccueilComponent },
       { path: 'personel', component: PersonelListComponent},
-      // { path: 'more1', component: More1InformationComponent},
-      // { path: 'more2', component: More2InformationComponent},
-      // { path: 'more3', component: More3InformationComponent},
       { path: 'not-found', component: NotFoundComponent},
       { path: 'ess', component: NavbarComponent},
       { path: 'starter', component: PersonelFormComponent},

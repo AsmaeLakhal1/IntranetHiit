@@ -1,4 +1,7 @@
 import { IPlainPassword } from "./plainPassword.interface";
+import { EmployeeLanguages } from "./employeeLanguages.interface";
+import { Experiences } from "./experiences.interface";
+import { Projects } from "./projects.interface";
 
 export interface Employe {
 
@@ -12,11 +15,16 @@ export interface Employe {
 	email?: string
 	dateNaissance?: Date
 	salaire?: number
-	numero?: number
-	adresse?: string
+	phoneNumber?: number
+	address?: string
 	startDate?: Date
 	status?: string
 	image?: string
 	id?: number
 	plainPassword?: IPlainPassword
+	birthday?: Date
+	dependentChild?: number
+	employee_languages?: EmployeeLanguages
+	experiences?: Experiences
+	projects?: Projects
 }

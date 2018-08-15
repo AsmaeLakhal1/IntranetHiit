@@ -1,7 +1,8 @@
 import { Injectable }                        from '@angular/core';
 import { WorkflowService } from '../workflow/workflow.service';
-import { Personal, Address, FormData } from './formData.model';
+import { Personal, Address, FormData, myEmployeeLanguages, myFormations } from './formData.model';
 import { STEPS }  from '../workflow/workflow.model';
+import { EmployeeLanguages } from '../../../interfaces/employeeLanguages.interface';
 
 
 
@@ -12,6 +13,8 @@ export class FormDataService {
     private isPersonalFormValid: boolean = false;
     private isWorkFormValid: boolean = false;
     private isAddressFormValid: boolean = false;
+    private employee_languages: myEmployeeLanguages = new myEmployeeLanguages() ;
+    private formations: myFormations= new myFormations();
 
     constructor(private workflowService: WorkflowService) { 
     }
@@ -21,7 +24,11 @@ export class FormDataService {
         var personal: Personal = {
             firstName: this.formData.firstName,
             lastName: this.formData.lastName,
-            email: this.formData.email
+            email: this.formData.email,
+            birthday: this.formData.birthday,
+            phoneNumber: this.formData.phoneNumber,
+            address: this.formData.address,
+            
         };
         return personal;
     }
@@ -32,14 +39,85 @@ export class FormDataService {
         this.formData.firstName = data.firstName;
         this.formData.lastName = data.lastName;
         this.formData.email = data.email;
+        this.formData.birthday=data.birthday;
+        this.formData.phoneNumber=data.phoneNumber;
+        this.formData.address=data.address
+       
+        
         // Validate Personal Step in Workflow
         this.workflowService.validateStep(STEPS.personal);
     }
 
-    getWork() : string {
-        // Return the work type
-        return this.formData.work;
+    // getWork() : string {
+    //     // Return the work type
+    //     return this.formData.work;
+    // }
+    getPersonal2(){
+        
+        var personal: Personal= {
+           
+            formations:{
+                startDate: this.formData.startDate,
+                endDate: this.formData.endDate,
+                organisazion: this.formData.organization,
+                country: this.formations.country,
+                diploma: this.formData.diploma,
+                level: this.formData.level,
+                speciality: this.formData.speciality
+
+
+            },
+            employee_languages:{
+                language:this.formData.language,
+                level: this.formData.level2
+            },
+            experiences:{
+                position: this.formData.position,
+                description:this.formData.descriptionE,
+                startDate:this.formData.startDateE,
+                endDate:this.formData.endDateE,
+                city:this.formData.cityE,
+                country:this.formData.countryE,
+                employer:this.formData.employer
+            },
+            projects:{
+                name:this.formData.name,
+                date:this.formData.date,
+                description:this.formData.descriptoinP
+            }
+
+          
+        };
+        return personal;
     }
+     
+    setPersonal2(data: Personal){
+        this.isPersonalFormValid = true;
+        this.formData.language=data.employee_languages.language;
+        this.formData.level2=data.employee_languages.level;
+        this.formData.position=data.experiences.position;
+        this.formData.descriptionE=data.experiences.description;
+        this.formData.startDateE=data.experiences.startDate;
+        this.formData.endDateE=data.experiences.endDate;
+        this.formData.cityE=data.experiences.city;
+        this.formData.countryE=data.experiences.country;
+        this.formData.employer=data.experiences.employer;
+        this.formData.name=data.projects.name;
+        this.formData.date=data.projects.date;
+        this.formData.descriptoinP=data.projects.description;
+       
+
+
+
+
+
+
+
+
+        this.workflowService.validateStep(STEPS.work);
+
+    }
+
     
     setWork(data: string) {
         // Update the work type only when the Work Form had been validated successfully

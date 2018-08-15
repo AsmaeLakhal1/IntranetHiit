@@ -18,9 +18,6 @@ import { EmployesService } from './starter/services/employes.service';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AccueilComponent } from './starter/accueil/accueil.component';
 import { PersonelInformationComponent } from './starter/personel-information/personel-information.component';
-import { More1InformationComponent } from './starter/more1-information/more1-information.component';
-import { More2InformationComponent } from './starter/more2-information/more2-information.component';
-import { More3InformationComponent } from './starter/more3-information/more3-information.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Form2Component } from './starter/form2/form2.component';
 import { DataComponent } from './starter/form2/data/data.component';
@@ -61,9 +58,6 @@ import { WorkflowService } from './starter/form2/workflow/workflow.service';
     NotFoundComponent,
     AccueilComponent,
     PersonelInformationComponent,
-    More1InformationComponent,
-    More2InformationComponent,
-    More3InformationComponent,
     Form2Component,
     DataComponent,
     NavbarComponent,

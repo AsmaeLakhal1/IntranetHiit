@@ -1,4 +1,4 @@
-export interface Formations {
+export interface Experiences {
     position?: string;
     description?: string;
     startDate?: Date;

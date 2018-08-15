@@ -66,7 +66,7 @@ export class PersonelFormComponent implements OnInit{
   };
   // debugger
     this.employesService.createNewEmploye(newEmploye);
-    // this.router.navigate(['/personel']);
+    this.router.navigate(['/personel']);
     this.onSave(newEmploye);
   }
   onSave(newEmployee){

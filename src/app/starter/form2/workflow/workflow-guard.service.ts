@@ -18,7 +18,7 @@ export class WorkflowGuard implements CanActivate {
 
         return this.verifyWorkFlow(path);
     }
-
+ 
     verifyWorkFlow(path) : boolean {
         console.log("Entered '" + path + "' path.");
 
@@ -32,5 +32,6 @@ export class WorkflowGuard implements CanActivate {
         };
 
         return true;
+    
     }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Address } from '../data/formData.model';
+import { Address, Personal } from '../data/formData.model';
 import { Router } from '@angular/router';
 import { FormDataService } from '../data/formData.service';
 
@@ -10,15 +10,16 @@ import { FormDataService } from '../data/formData.service';
 })
 export class AddressComponent implements OnInit {
 
-  title = 'Where do you live?';
+  title = 'Vos expériences !!';
   address: Address;
+  personal: Personal;
   form: any;
   
   constructor(private router: Router, private formDataService: FormDataService) {
   }
 
   ngOnInit() {
-      this.address = this.formDataService.getAddress();
+      this.personal = this.formDataService.getPersonal2();
       console.log('Address feature loaded!');
   }
 
@@ -27,7 +28,7 @@ export class AddressComponent implements OnInit {
           return false;
       }
           
-      this.formDataService.setAddress(this.address);
+      this.formDataService.setPersonal2(this.personal);
       return true;
   }
 
@@ -39,6 +40,7 @@ export class AddressComponent implements OnInit {
   }
 
   goToNext(form: any) {
+      debugger
       if (this.save(form)) {
           // Navigate to the result page
           this.router.navigate(['/result']);
