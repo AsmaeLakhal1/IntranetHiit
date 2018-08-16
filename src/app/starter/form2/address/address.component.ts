@@ -19,7 +19,7 @@ export class AddressComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.personal = this.formDataService.getPersonal2();
+      this.address = this.formDataService.getAddress();
       console.log('Address feature loaded!');
   }
 
@@ -28,7 +28,7 @@ export class AddressComponent implements OnInit {
           return false;
       }
           
-      this.formDataService.setPersonal2(this.personal);
+      this.formDataService.setAddress(this.address);
       return true;
   }
 
@@ -40,7 +40,7 @@ export class AddressComponent implements OnInit {
   }
 
   goToNext(form: any) {
-      debugger
+    debugger
       if (this.save(form)) {
           // Navigate to the result page
           this.router.navigate(['/result']);

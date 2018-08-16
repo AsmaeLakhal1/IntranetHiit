@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormDataService } from '../data/formData.service';
 import { FormData }                   from '../data/formData.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-result',
@@ -13,7 +14,8 @@ export class ResultComponent implements OnInit {
   @Input() formData: FormData;
   isFormValid: boolean = false;
   
-  constructor(private formDataService: FormDataService) {
+  constructor(private formDataService: FormDataService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -26,6 +28,12 @@ export class ResultComponent implements OnInit {
       alert('Excellent Job!');
       this.formData = this.formDataService.resetFormData();
       this.isFormValid = false;
+      this.sendDataToServer(this.formData);
   }
+
+  sendDataToServer(employee){
+    this.formDataService.saveEmployeeToSerever(employee);
+  }
+
 
 }

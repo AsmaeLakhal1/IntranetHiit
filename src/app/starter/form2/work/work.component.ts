@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormDataService } from '../data/formData.service';
-import { Personal } from '../data/formData.model';
+import { Personal, Work } from '../data/formData.model';
 
 @Component({
   selector: 'app-work',
@@ -9,12 +9,12 @@ import { Personal } from '../data/formData.model';
   styleUrls: ['./work.component.css']
 })
 export class WorkComponent implements OnInit {
-  title = 'Compléter vos informations à propos de votre formation';
-  workType: string;
+  title = 'A propos de votre formation';
+  work: Work;
   workType3: string;
   workType2: string;
   form: any;
-  personal: Personal
+//   personal: Personal
   
   constructor(private router: Router, private formDataService: FormDataService) {
   }
@@ -22,9 +22,9 @@ export class WorkComponent implements OnInit {
  
 
   ngOnInit() {
-      
-    this.personal = this.formDataService.getPersonal2();
-    console.log('Personal feature loaded!');
+      debugger
+    this.work = this.formDataService.getWork();
+    console.log('work feature loaded!');
 
 }
 
@@ -33,7 +33,7 @@ save(form: any): boolean {
         return false;
     }
         
-    this.formDataService.setPersonal2(this.personal);
+    this.formDataService.setWork(this.work);
     return true;
 }
   
@@ -46,10 +46,11 @@ save(form: any): boolean {
   }
 
   goToNext(form: any) {
-      
+      debugger
       if (this.save(form)) {
           // Navigate to the address page
           this.router.navigate(['/address']);
+          
       }
   }
 

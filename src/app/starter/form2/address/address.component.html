@@ -10,45 +10,47 @@
                   <div class='col-xs-12 col-sm-3'>
                       <div class="form-group">
                           <label class="control-label" for="position">Position</label>  
-                          <input class="form-control input-md" #position="ngModel" required id="position" name="position" type="text" placeholder="Position" [(ngModel)]="personal.position">
+                          <input class="form-control input-md" #position="ngModel" required id="position" name="position" type="text" placeholder="Position" [(ngModel)]="address.experiences.position">
                           <div class="alert alert-danger" [hidden]="position.valid">Champ obligatoire</div>
                       </div>
                   </div>
                   <div class='col-xs-4 col-sm-offset-1 col-sm-3'>
                       <div class="form-group">
                           <label class="control-label" for="employer">Employeur</label>  
-                          <input class="form-control input-md" #employer="ngModel" required id="employer" name="employer" type="text" placeholder="Employeur" [(ngModel)]="personal.experiences.employer">
+                          <input class="form-control input-md" #employer="ngModel" required id="employer" name="employer" type="text" placeholder="Employeur" [(ngModel)]="address.experiences.employer">
                           <div class="alert alert-danger" [hidden]="employer.valid">Champ obligatoire</div>
                       </div>
                   </div>
                   <div class='col-xs-offset-1 col-xs-7 col-sm-offset-1 col-sm-3'>
                       <div class="form-group">
                           <label class="control-label" for="city">Ville</label>  
-                          <input class="form-control input-md" #city="ngModel" required id="city" name="city" type="text" placeholder="Ville" [(ngModel)]="personal.city">
+                          <input class="form-control input-md" #city="ngModel" required id="city" name="city" type="text" placeholder="Ville" [(ngModel)]="address.experiences.city">
                           <div class="alert alert-danger" [hidden]="city.valid">Champ obligatoire</div>
                       </div>  
                   </div> 
+
+                  
               </div>
 
               <div class="row">
                 <div class='col-xs-12 col-sm-3'>
                     <div class="form-group">
                         <label class="control-label" for="startDate">Date de début</label>  
-                        <input class="form-control input-md" #startDate="ngModel" required id="startDate" name="startDate" type="date" placeholder="Date de début" [(ngModel)]="personal.startDate">
+                        <input class="form-control input-md" #startDate="ngModel" required id="startDate" name="startDate" type="date" placeholder="Date de début" [(ngModel)]="address.experiences.startDate">
                         <div class="alert alert-danger" [hidden]="startDate.valid">Champ obligatoire</div>
                     </div>
                 </div>
                 <div class='col-xs-4 col-sm-offset-1 col-sm-3'>
                     <div class="form-group">
                         <label class="control-label" for="endDate">Date de Fin</label>  
-                        <input class="form-control input-md" #endDate="ngModel" required id="endDate" name="endDate" type="date" placeholder="Date de fin" [(ngModel)]="personal.endDate">
+                        <input class="form-control input-md" #endDate="ngModel" required id="endDate" name="endDate" type="date" placeholder="Date de fin" [(ngModel)]="address.experiences.endDate">
                         <div class="alert alert-danger" [hidden]="endDate.valid">Champ obligatoire</div>
                     </div>
                 </div>
                 <div class='col-xs-offset-1 col-xs-7 col-sm-offset-1 col-sm-3'>
                     <div class="form-group">
                         <label class="control-label" for="country">Pays</label>  
-                        <input class="form-control input-md" #country="ngModel" required id="country" name="country" type="text" placeholder="country" [(ngModel)]="personal.country">
+                        <input class="form-control input-md" #country="ngModel" required id="country" name="country" type="text" placeholder="country" [(ngModel)]="address.experiences.country">
                         <div class="alert alert-danger" [hidden]="country.valid">Champ Obligatoire</div>
                     </div>  
                 </div> 
@@ -56,7 +58,7 @@
 
             <div class="form-group">
                 <label class="control-label" for="description">Description</label>  
-                <input class="form-control input-md" #description="ngModel" required id="description" name="description" type="text" placeholder="Description" [(ngModel)]="personal.description">
+                <input class="form-control input-md" #description="ngModel" required id="description" name="description" type="text" placeholder="Description" [(ngModel)]="address.experiences.description">
                 <div class="alert alert-danger" [hidden]="description.valid">Street Address is required</div>
             </div>  
             <button type="button" class="btn btn-default">Ajouter Projet</button>

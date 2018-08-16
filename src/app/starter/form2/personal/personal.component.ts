@@ -13,7 +13,7 @@ export class PersonalComponent implements OnInit {
 
   title = 'Please tell us about yourself.';
     personal: Personal;
-    employe: Employe;
+    // employe: Employe;
     form: any;
     
     constructor(private router: Router, private formDataService: FormDataService) {
@@ -31,9 +31,11 @@ export class PersonalComponent implements OnInit {
             
         this.formDataService.setPersonal(this.personal);
         return true;
+        
     }
 
     goToNext(form: any) {
+        debugger
         if (this.save(form)) {
             // Navigate to the work page
             this.router.navigate(['/work']);

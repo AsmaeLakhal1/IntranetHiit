@@ -34,14 +34,14 @@
                 <div class='col-xs-12 col-sm-4'>
                     <div class="form-group">
                         <label class="control-label" for="firstname">Spécialité</label>  
-                        <input class="form-control input-md" #speciality="ngModel" required id="speciality" name="speciality" type="text" placeholder="Spécialité" [(ngModel)]="personal.speciality">   
+                        <input class="form-control input-md" #speciality="ngModel" required id="speciality" name="speciality" type="text" placeholder="Spécialité" [(ngModel)]="work.formations.speciality">   
                         <div class="alert alert-danger" [hidden]="speciality.valid">Champs Obligatoire</div>
                     </div>
 
                    
                   <div class="form-group">
                     <label class="control-label" for="country">Pays</label>  
-                    <input class="form-control input-md" #country="ngModel" required id="country" name="country" type="text" placeholder="Pays" [(ngModel)]="personal.country">
+                    <input class="form-control input-md" #country="ngModel" required id="country" name="country" type="text" placeholder="Pays" [(ngModel)]="work.formations.country">
                     <div class="alert alert-danger" [hidden]="country.valid">Champs Obligatoire</div>
                 </div>
 
@@ -64,44 +64,44 @@
                   <option value="74">Japanese</option>
                   
                 </select> -->
-                <div class="form-group">
+                <!-- <div class="form-group">
                 <div class="radio">
                 <label for="language">Langue</label>
                 <br><br><label>
-                    <input type="radio" #work1="ngModel" required name="work1" [(ngModel)]="workType" value="7">
+                    <input type="radio" #work1="ngModel" required name="work1" [(ngModel)]="work" value="7">
                     Arabic
                 </label>
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" #work1="ngModel" required name="work1" [(ngModel)]="workType" value="40">
+                    <input type="radio" #work1="ngModel" required name="work1" [(ngModel)]="work" value="40">
                     English
                 </label>
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" #work1="ngModel" required name="work1" [(ngModel)]="workType" value="47">
+                    <input type="radio" #work1="ngModel" required name="work1" [(ngModel)]="work" value="47">
                     French
                 </label>
             </div>
-        </div>
+        </div> -->
 
                 </div>
                 <div class='col-xs-12 col-sm-4'>
                     
                     <div class="form-group">
                         <label class="control-label" for="diploma">Diplome</label>  
-                        <input class="form-control input-md" #diploma="ngModel" required id="diploma" name="diploma" type="text" placeholder="Diplome" [(ngModel)]="personal.diploma">
+                        <input class="form-control input-md" #diploma="ngModel" required id="diploma" name="diploma" type="text" placeholder="Diplome" [(ngModel)]="work.formations.diploma">
                         <div class="alert alert-danger" [hidden]="diploma.valid">Champs Obligatoire</div>
                     </div>
 
                   <div class="form-group">
                     <label class="control-label" for="startDate">Date De Début</label>
-                    <input class="form-control input-md" #startDate="ngModel" required id="startDate" name="startDate" type="date" placeholder="Date de Début" [(ngModel)]="personal.startDate">
+                    <input class="form-control input-md" #startDate="ngModel" required id="startDate" name="startDate" type="date" placeholder="Date de Début" [(ngModel)]="work.formations.startDate">
                     <div class="alert alert-danger" [hidden]="startDate.valid">Champs Obligatoire</div>
                 </div>
                 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <div class="radio">
                     <label for="level">Niveau en Langue</label>
                     <br><br><label>
@@ -121,44 +121,44 @@
                         Avancé
                     </label>
                 </div>
-            </div>
+            </div> -->
             </div>
 
                 <div class='col-xs-12 col-sm-4'>
                     
                     <div class="form-group">
                         <label class="control-label" for="organization">Organisation</label>  
-                        <input class="form-control input-md" #organization="ngModel" required id="organization" name="organization" type="text" placeholder="Organisation" [(ngModel)]="personal.organization">
+                        <input class="form-control input-md" #organization="ngModel" required id="organization" name="organization" type="text" placeholder="Organisation" [(ngModel)]="work.formations.organization">
                         <div class="alert alert-danger" [hidden]="organization.valid">Champs Obligatoire</div>
                     </div>
                    
                     <div class="form-group">
                         <label class="control-label" for="endDate">Date De Fin</label>
-                        <input class="form-control input-md" #endDate="ngModel" required id="endDate" name="endDate" type="date" placeholder="Date de Fin" [(ngModel)]="personal.endDate">
+                        <input class="form-control input-md" #endDate="ngModel" required id="endDate" name="endDate" type="date" placeholder="Date de Fin" [(ngModel)]="work.formations.endDate">
                         <div class="alert alert-danger" [hidden]="endDate.valid">Champs Obligatoire</div>
     
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <div class="radio">
                         <label for="level">Niveau</label>
                         <br><br><label>
-                            <input type="radio" #work3="ngModel" required name="#work3" [(ngModel)]="workType3" value="1">
+                            <input type="radio" #work.level="ngModel" required name="#work.level" [(ngModel)]="work.level" value="1">
                             bac+1
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" #work3="ngModel" required name="#work3" [(ngModel)]="workType3" value="2">
+                            <input type="radio" #work.level="ngModel" required name="#work.level" [(ngModel)]="work.level" value="2">
                           bac+2
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" #work3="ngModel" required name="#work3" [(ngModel)]="workType3" value="-1">
+                            <input type="radio" #work.level="ngModel" required name="#work.level" [(ngModel)]="work.level" value="-1">
                             plus
                         </label>
                     </div>
-                </div>
+                </div> -->
 
                 </div>
             </div>

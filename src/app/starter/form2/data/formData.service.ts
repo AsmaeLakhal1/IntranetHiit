@@ -1,8 +1,9 @@
 import { Injectable }                        from '@angular/core';
 import { WorkflowService } from '../workflow/workflow.service';
-import { Personal, Address, FormData, myEmployeeLanguages, myFormations } from './formData.model';
+import { Personal, Address, FormData, myEmployeeLanguages, myFormations, Work, myExperiences, myProjects } from './formData.model';
 import { STEPS }  from '../workflow/workflow.model';
 import { EmployeeLanguages } from '../../../interfaces/employeeLanguages.interface';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -15,8 +16,12 @@ export class FormDataService {
     private isAddressFormValid: boolean = false;
     private employee_languages: myEmployeeLanguages = new myEmployeeLanguages() ;
     private formations: myFormations= new myFormations();
+    private experiences: myExperiences= new myExperiences();
+    private projects: myProjects= new myProjects();
+    
 
-    constructor(private workflowService: WorkflowService) { 
+    constructor(private workflowService: WorkflowService,
+        private httpClient: HttpClient) { 
     }
 
     getPersonal(): Personal {
@@ -24,10 +29,11 @@ export class FormDataService {
         var personal: Personal = {
             firstName: this.formData.firstName,
             lastName: this.formData.lastName,
-            email: this.formData.email,
             birthday: this.formData.birthday,
             phoneNumber: this.formData.phoneNumber,
             address: this.formData.address,
+            dependentChild: this.formData.dependentChild
+            
             
         };
         return personal;
@@ -38,7 +44,6 @@ export class FormDataService {
         this.isPersonalFormValid = true;
         this.formData.firstName = data.firstName;
         this.formData.lastName = data.lastName;
-        this.formData.email = data.email;
         this.formData.birthday=data.birthday;
         this.formData.phoneNumber=data.phoneNumber;
         this.formData.address=data.address
@@ -48,19 +53,15 @@ export class FormDataService {
         this.workflowService.validateStep(STEPS.personal);
     }
 
-    // getWork() : string {
-    //     // Return the work type
-    //     return this.formData.work;
-    // }
-    getPersonal2(){
-        
-        var personal: Personal= {
+    getWork() : Work {
+
+        var work: Work= {
            
             formations:{
                 startDate: this.formData.startDate,
                 endDate: this.formData.endDate,
                 organisazion: this.formData.organization,
-                country: this.formations.country,
+                country: this.formData.country,
                 diploma: this.formData.diploma,
                 level: this.formData.level,
                 speciality: this.formData.speciality
@@ -70,7 +71,31 @@ export class FormDataService {
             employee_languages:{
                 language:this.formData.language,
                 level: this.formData.level2
-            },
+            }
+           
+
+          
+        };
+        return work;
+        
+    }
+
+    setWork(data: Work) {
+        this.isPersonalFormValid = true;
+        this.formData.language=data.employee_languages.language;
+        this.formData.level2=data.employee_languages.level;
+        this.formData.startDate=data.formations.startDate;
+        this.formData.endDate=data.formations.endDate;
+        this.formData.organization=data.formations.organisazion;
+        this.formData.country=data.formations.country;
+        this.formData.diploma=data.formations.diploma;
+        this.formData.level=data.formations.level;
+        this.formData.speciality=data.formations.speciality;
+        this.workflowService.validateStep(STEPS.work);
+    }
+
+    getAddress() : Address {
+        var address: Address={
             experiences:{
                 position: this.formData.position,
                 description:this.formData.descriptionE,
@@ -85,16 +110,13 @@ export class FormDataService {
                 date:this.formData.date,
                 description:this.formData.descriptoinP
             }
-
-          
         };
-        return personal;
+        return address;
     }
-     
-    setPersonal2(data: Personal){
+   
+    setAddress(data: Address) {
         this.isPersonalFormValid = true;
-        this.formData.language=data.employee_languages.language;
-        this.formData.level2=data.employee_languages.level;
+        // Update the Address data only when the Address Form had been validated successfully
         this.formData.position=data.experiences.position;
         this.formData.descriptionE=data.experiences.description;
         this.formData.startDateE=data.experiences.startDate;
@@ -105,46 +127,6 @@ export class FormDataService {
         this.formData.name=data.projects.name;
         this.formData.date=data.projects.date;
         this.formData.descriptoinP=data.projects.description;
-       
-
-
-
-
-
-
-
-
-        this.workflowService.validateStep(STEPS.work);
-
-    }
-
-    
-    setWork(data: string) {
-        // Update the work type only when the Work Form had been validated successfully
-        this.isWorkFormValid = true;
-        this.formData.work = data;
-        // Validate Work Step in Workflow
-        this.workflowService.validateStep(STEPS.work);
-    }
-
-    getAddress() : Address {
-        // Return the Address data
-        var address: Address = {
-            street: this.formData.street,
-            city: this.formData.city,
-            state: this.formData.state,
-            zip: this.formData.zip
-        };
-        return address;
-    }
-
-    setAddress(data: Address) {
-        // Update the Address data only when the Address Form had been validated successfully
-        this.isAddressFormValid = true;
-        this.formData.street = data.street;
-        this.formData.city = data.city;
-        this.formData.state = data.state;
-        this.formData.zip = data.zip;
         // Validate Address Step in Workflow
         this.workflowService.validateStep(STEPS.address);
     }
@@ -169,4 +151,22 @@ export class FormDataService {
                 this.isWorkFormValid && 
                 this.isAddressFormValid;
     }
+
+
+    saveEmployeeToSerever(newEmplyee){
+
+        let url = 'http://192.168.1.74:8000/intranet/api/employee-registration';
+        debugger
+        this.httpClient.post(url, newEmplyee)
+                       .subscribe(
+                         () =>{
+                           console.log('enregistrement termine !');
+                         },
+                         (error) =>{
+                           debugger
+                           console.log('erreur de sauvgarde' + error)
+                         }
+                       );
+                     
+          }
 }
