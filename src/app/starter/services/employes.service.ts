@@ -69,19 +69,9 @@ export class EmployesService {
     return liste;
 
   }
-  //add_header 'Access-Control-Allow-Origin'
-  //123456789
+  
   saveEmployeeToSerever(newEmplyee){
-// const headerDict = {
-//   'Content-Type': 'application/json',
-//   'Accept': 'application/json',
-//   'Access-Control-Allow-Headers': 'Content-Type',
-//   'Access-Control-Allow-origin': 'http://192.168.1.74:8000/',
-// }
 
-// const requestOptions = {                                                                                                                                                                                 
-//   headers: new HttpHeaders(headerDict), 
-// };
 let url = 'http://192.168.1.74:8000/intranet/api/employee-registration';
 debugger
 this.httpClient.post(url, newEmplyee)
@@ -94,19 +84,7 @@ this.httpClient.post(url, newEmplyee)
                    console.log('erreur de sauvgarde' + error)
                  }
                );
-              // .subscribe(
-              //   res => {                  
-                  
-              //     debugger
-              //     console.log(url);
-
-              //     console.log(res);
-              //   },
-              //   err => {
-              //     debugger
-              //     console.log("Error occured");
-              //   }
-              // );
+             
   }
  
   

@@ -13,7 +13,7 @@
                           <input class="form-control input-md" #position="ngModel" required id="position" name="position" type="text" placeholder="Position" [(ngModel)]="address.experiences.position">
                           <div class="alert alert-danger" [hidden]="position.valid">Champ obligatoire</div>
                       </div>
-                  </div>
+                    </div>
                   <div class='col-xs-4 col-sm-offset-1 col-sm-3'>
                       <div class="form-group">
                           <label class="control-label" for="employer">Employeur</label>  
@@ -59,16 +59,19 @@
             <div class="form-group">
                 <label class="control-label" for="description">Description</label>  
                 <input class="form-control input-md" #description="ngModel" required id="description" name="description" type="text" placeholder="Description" [(ngModel)]="address.experiences.description">
-                <div class="alert alert-danger" [hidden]="description.valid">Street Address is required</div>
+                <div class="alert alert-danger" [hidden]="description.valid">Champ obligatoire</div>
             </div>  
-            <button type="button" class="btn btn-default">Ajouter Projet</button>
+            <button type="button" class="btn btn-default" (click)=addProject()>Ajouter Projet</button>
           </div>
+
+          <app-new-project (saveBtn)= saveChange($event) [hidden]="add === false " ></app-new-project>
           
           <div class="form-group text-center">
               <button class="btn btn-outline-rounded btn-default" (click)="goToPrevious(addressForm)"> <span style="margin-right:10px;" class="glyphicon glyphicon-arrow-left"></span> Previous</button>
               <button class="btn btn-outline-rounded btn-info" [disabled]="!addressForm.valid" (click)="goToNext(addressForm)"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
           </div>
       </div>
+     
   
   </div>
 </form>

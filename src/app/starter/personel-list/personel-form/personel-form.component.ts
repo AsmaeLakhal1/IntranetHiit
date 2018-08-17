@@ -48,7 +48,7 @@ export class PersonelFormComponent implements OnInit{
   }
   onSubmitForm(){
     const formValue = this.employeForm.value;
-    // debugger
+     
     const newEmploye : Employe = {
       username: formValue['username'],
       civility: formValue['civility'],
@@ -64,7 +64,7 @@ export class PersonelFormComponent implements OnInit{
       }
      
   };
-  // debugger
+
     this.employesService.createNewEmploye(newEmploye);
     this.router.navigate(['/personel']);
     this.onSave(newEmploye);

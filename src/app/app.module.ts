@@ -30,6 +30,8 @@ import { AddressComponent } from './starter/form2/address/address.component';
 import { WorkflowGuard } from './starter/form2/workflow/workflow-guard.service';
 import { FormDataService } from './starter/form2/data/formData.service';
 import { WorkflowService } from './starter/form2/workflow/workflow.service';
+import { NewProjectComponent } from './starter/form2/new-project/new-project.component';
+
 
 
 
@@ -66,6 +68,8 @@ import { WorkflowService } from './starter/form2/workflow/workflow.service';
     WorkComponent,
     WorkflowComponent,
     AddressComponent,
+    NewProjectComponent,
+    
     
    
     

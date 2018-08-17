@@ -1,7 +1,7 @@
 export interface Formations {
     startDate?: Date;
     endDate?: Date;
-    organisazion?: string;
+    organization?: string;
     country?: string;
     diploma?: string;
     level?: number;

@@ -33,7 +33,7 @@
             <div class="row">
                 <div class='col-xs-12 col-sm-4'>
                     <div class="form-group">
-                        <label class="control-label" for="firstname">Spécialité</label>  
+                        <label class="control-label" for="speciality">Spécialité</label>  
                         <input class="form-control input-md" #speciality="ngModel" required id="speciality" name="speciality" type="text" placeholder="Spécialité" [(ngModel)]="work.formations.speciality">   
                         <div class="alert alert-danger" [hidden]="speciality.valid">Champs Obligatoire</div>
                     </div>
@@ -105,19 +105,19 @@
                     <div class="radio">
                     <label for="level">Niveau en Langue</label>
                     <br><br><label>
-                        <input type="radio" #work2="ngModel" required name="work2" [(ngModel)]="workType2" value="beginner">
+                        <input type="radio" #work.employee_languages.level="ngModel" required name="work.employee_languages.level" [(ngModel)]="work" value="beginner">
                         Débutant
                     </label>
                 </div>
                 <div class="radio">
                     <label>
-                        <input type="radio" #work2="ngModel" required name="work2" [(ngModel)]="workType2" value="intermediate">
+                        <input type="radio" #work.employee_languages.level="ngModel" required name="work.employee_languages.level" [(ngModel)]="work" value="intermediate">
                         Intermediaire
                     </label>
                 </div>
                 <div class="radio">
                     <label>
-                        <input type="radio" #work2="ngModel" required name="work2" [(ngModel)]="workType2" value="advanced">
+                        <input type="radio" #work.employee_languages.level="ngModel" required name="work.employee_languages.level" [(ngModel)]="work" value="advanced">
                         Avancé
                     </label>
                 </div>
