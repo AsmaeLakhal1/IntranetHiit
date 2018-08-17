@@ -60,7 +60,7 @@ export class FormDataService {
             formations:{
                 startDate: this.formData.startDate,
                 endDate: this.formData.endDate,
-                organisazion: this.formData.organization,
+                organization: this.formData.organization,
                 country: this.formData.country,
                 diploma: this.formData.diploma,
                 level: this.formData.level,
@@ -86,7 +86,7 @@ export class FormDataService {
         this.formData.level2=data.employee_languages.level;
         this.formData.startDate=data.formations.startDate;
         this.formData.endDate=data.formations.endDate;
-        this.formData.organization=data.formations.organisazion;
+        this.formData.organization=data.formations.organization;
         this.formData.country=data.formations.country;
         this.formData.diploma=data.formations.diploma;
         this.formData.level=data.formations.level;

@@ -22,7 +22,7 @@ export class WorkComponent implements OnInit {
  
 
   ngOnInit() {
-      debugger
+      
     this.work = this.formDataService.getWork();
     console.log('work feature loaded!');
 

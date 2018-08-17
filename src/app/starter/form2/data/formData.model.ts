@@ -29,6 +29,7 @@ export class FormData {
     date:Date=new Date();
     descriptoinP:string='';
     dependentChild: number=null;
+    project: Projects;
     
 
     clear() {
@@ -58,6 +59,7 @@ export class FormData {
         this.name='';
         this.date=null;
         this.descriptoinP='';
+        this.project=null;
     }
 }
 
@@ -92,7 +94,7 @@ export class myEmployeeLanguages implements EmployeeLanguages{
 export class myFormations implements Formations{
     startDate: Date=new Date();
     endDate: Date=new Date();
-    organisazion: string='';
+    organization: string='';
     country: string='';
     diploma: string='';
     level:number=0;

@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Address, Personal } from '../data/formData.model';
 import { Router } from '@angular/router';
 import { FormDataService } from '../data/formData.service';
+import { Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-address',
@@ -14,6 +16,7 @@ export class AddressComponent implements OnInit {
   address: Address;
   personal: Personal;
   form: any;
+  add: boolean=false;
   
   constructor(private router: Router, private formDataService: FormDataService) {
   }
@@ -45,6 +48,14 @@ export class AddressComponent implements OnInit {
           // Navigate to the result page
           this.router.navigate(['/result']);
       }
+  }
+
+  addProject(){
+      this.add=true;
+  }
+
+  saveChange(event){
+      this.address.projects=event;
   }
 
 }

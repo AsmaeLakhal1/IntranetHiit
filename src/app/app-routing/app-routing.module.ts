@@ -16,6 +16,7 @@ import { AddressComponent } from '../starter/form2/address/address.component';
 import { ResultComponent } from '../starter/form2/result/result.component';
 import { WorkflowGuard } from '../starter/form2/workflow/workflow-guard.service';
 import { NavbarComponent } from '../starter/form2/navbar/navbar.component';
+import { NewProjectComponent } from '../starter/form2/new-project/new-project.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { NavbarComponent } from '../starter/form2/navbar/navbar.component';
       { path: 'starter', component: PersonelFormComponent},
       { path: 'information', component: PersonelInformationComponent},
       { path: 'personel/new/:id', component: PersonelFormComponent},
+      { path: 'newProject', component: NewProjectComponent},
        // 1st Route
     { path: 'personal',  component: PersonalComponent },
     // 2nd Route
