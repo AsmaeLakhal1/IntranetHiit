@@ -31,6 +31,12 @@ import { WorkflowGuard } from './starter/form2/workflow/workflow-guard.service';
 import { FormDataService } from './starter/form2/data/formData.service';
 import { WorkflowService } from './starter/form2/workflow/workflow.service';
 import { NewProjectComponent } from './starter/form2/new-project/new-project.component';
+import { AuthComponent } from './auth/auth.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { authService } from './starter/services/auth.service';
+import { authGuardService } from './starter/services/auth-guard.service';
+import { DataService } from './starter/services/data.service';
 
 
 
@@ -69,6 +75,10 @@ import { NewProjectComponent } from './starter/form2/new-project/new-project.com
     WorkflowComponent,
     AddressComponent,
     NewProjectComponent,
+    AuthComponent,
+    SigninComponent,
+    SignupComponent,
+    
     
     
    
@@ -82,7 +92,7 @@ import { NewProjectComponent } from './starter/form2/new-project/new-project.com
     FormsModule,
     // RouterModule.forRoot(appRoutes)
   ],
-  providers: [EmployesService, WorkflowService, WorkflowGuard,FormDataService],
+  providers: [EmployesService, WorkflowService, WorkflowGuard,FormDataService, authService, authGuardService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
