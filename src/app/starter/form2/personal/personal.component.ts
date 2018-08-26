@@ -11,7 +11,7 @@ import { Employe } from '../../../interfaces/employe.interface';
 })
 export class PersonalComponent implements OnInit {
 
-  title = 'Please tell us about yourself.';
+  title = 'Veuillez completer votre inscription !! ';
     personal: Personal;
     // employe: Employe;
     form: any;

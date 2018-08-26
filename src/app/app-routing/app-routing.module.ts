@@ -17,6 +17,9 @@ import { ResultComponent } from '../starter/form2/result/result.component';
 import { WorkflowGuard } from '../starter/form2/workflow/workflow-guard.service';
 import { NavbarComponent } from '../starter/form2/navbar/navbar.component';
 import { NewProjectComponent } from '../starter/form2/new-project/new-project.component';
+import { SigninComponent } from '../auth/signin/signin.component';
+import { SignupComponent } from '../auth/signup/signup.component';
+
 
 @NgModule({
   imports: [
@@ -24,12 +27,15 @@ import { NewProjectComponent } from '../starter/form2/new-project/new-project.co
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: AccueilComponent },
       { path: 'personel', component: PersonelListComponent},
-      { path: 'not-found', component: NotFoundComponent},
+      { path: 'inscription', component: PersonalComponent},
+      { path: 'auth/signin', component: SigninComponent},
+      { path: 'auth/signup', component: SignupComponent},
       { path: 'ess', component: NavbarComponent},
       { path: 'starter', component: PersonelFormComponent},
       { path: 'information', component: PersonelInformationComponent},
       { path: 'personel/new/:id', component: PersonelFormComponent},
       { path: 'newProject', component: NewProjectComponent},
+     
        // 1st Route
     { path: 'personal',  component: PersonalComponent },
     // 2nd Route
@@ -42,6 +48,7 @@ import { NewProjectComponent } from '../starter/form2/new-project/new-project.co
     // { path: '',   redirectTo: '/personal', pathMatch: 'full' },
     // 6th Route
     // { path: '**', component: PersonalComponent },
+    { path: 'not-found', component: NotFoundComponent},
       { path: '**', redirectTo: '/not-found'}
       
     ])
