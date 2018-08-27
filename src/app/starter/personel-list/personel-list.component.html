@@ -15,7 +15,7 @@
       <tr  *ngFor="let employe of employes; let i =index ">
         <td>1</td>
         <td>  <!-- <img [src]="employe.image">  -->
-          {{'&nbsp;&nbsp;&nbsp;' + employe.username + employe.plainPassword.first }}</td>
+          {{'&nbsp;&nbsp;&nbsp;' + employe.username }}</td>
         <td> {{employe.email }} </td>
         <td>
                 <div class="dropdown">
@@ -24,6 +24,7 @@
                         <ul class="dropdown-menu">
                           <li><a routerLink="/information">Consulter</a></li>
                           <li><a routerLink="personel/new/:id" (click)="editEmployee()" >Modifier</a></li>
+                          <li><a routerLink="/comportement">Noter Comportement</a></li>
                           <li><a href="#">Supprimer</a></li>
                         </ul>
                     

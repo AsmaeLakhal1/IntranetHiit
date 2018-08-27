@@ -19,6 +19,8 @@ import { NavbarComponent } from '../starter/form2/navbar/navbar.component';
 import { NewProjectComponent } from '../starter/form2/new-project/new-project.component';
 import { SigninComponent } from '../auth/signin/signin.component';
 import { SignupComponent } from '../auth/signup/signup.component';
+import { ComportementComponent } from '../starter/comportement/comportement.component';
+import { StatisticsComponent } from '../starter/statistics/statistics.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { SignupComponent } from '../auth/signup/signup.component';
       { path: 'information', component: PersonelInformationComponent},
       { path: 'personel/new/:id', component: PersonelFormComponent},
       { path: 'newProject', component: NewProjectComponent},
+      { path: 'comportement', component: ComportementComponent},
+      { path: 'statistics', component: StatisticsComponent },
      
        // 1st Route
     { path: 'personal',  component: PersonalComponent },
