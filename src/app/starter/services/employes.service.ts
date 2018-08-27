@@ -3,6 +3,8 @@ import { Subject } from 'rxjs';
 import { IPlainPassword } from '../../interfaces/plainPassword.interface';
 import { Employe } from '../../interfaces/employe.interface';
 import { HttpClient} from '@angular/common/http';
+import { Comportement } from '../../interfaces/comportement.interface';
+import { ComportementComponent } from '../comportement/comportement.component';
 
 // @Injectable({
 //   providedIn: 'root'
@@ -24,7 +26,46 @@ export class EmployesService {
       plainPassword: {
         first : 'ok',
         second : 'ok'
+      },
+      comportement:[ {
+        annee: 2016,
+        implication: 2,
+        discretion: 5,
+        capaciteAdaptation: 4,
+        ponctualite: 4,
+        contactClient: 1,
+        rigueur: 2,
+        autonomie: 4,
+        espritEquipe: 3,
+        initiative: 5
+      },
+      {
+        annee: 2017,
+        implication: 3,
+        discretion: 2,
+        capaciteAdaptation: 4,
+        ponctualite: 2,
+        contactClient: 3,
+        rigueur: 4,
+        autonomie: 2,
+        espritEquipe: 3,
+        initiative: 5
+      },
+      {
+        annee: 2018,
+        implication: 5,
+        discretion: 4,
+        capaciteAdaptation: 2,
+        ponctualite: 2,
+        contactClient: 3,
+        rigueur: 3,
+        autonomie: 5,
+        espritEquipe: 5,
+        initiative: 5
       }
+    ],
+      
+      
     },
 
     {
@@ -40,7 +81,45 @@ export class EmployesService {
       plainPassword: {
         first : 'ok',
         second : 'ok'
+      },
+
+      comportement:[ {
+        annee: 2016,
+        implication: 5,
+        discretion: 1,
+        capaciteAdaptation: 2,
+        ponctualite: 4,
+        contactClient: 1,
+        rigueur: 4,
+        autonomie: 2,
+        espritEquipe: 2,
+        initiative: 2
+      },
+      {
+        annee: 2017,
+        implication: 5,
+        discretion: 5,
+        capaciteAdaptation: 4,
+        ponctualite: 2,
+        contactClient: 2,
+        rigueur: 3,
+        autonomie: 4,
+        espritEquipe: 3,
+        initiative: 5
+      },
+      {
+        annee: 2018,
+        implication: 5,
+        discretion: 5,
+        capaciteAdaptation: 5,
+        ponctualite: 5,
+        contactClient: 5,
+        rigueur: 5,
+        autonomie: 5,
+        espritEquipe: 5,
+        initiative: 5
       }
+    ]
     }
   ];
   employeSubject = new Subject<Employe[]>();
@@ -55,6 +134,10 @@ export class EmployesService {
    createNewEmploye(newEmploye: Employe){
     this.employes.push(newEmploye);
     this.emitEmploye();
+  }
+
+  createNewComportement(newComportement: Comportement){
+
   }
 
   findById(id: number){
@@ -86,6 +169,8 @@ this.httpClient.post(url, newEmplyee)
                );
              
   }
+
+  
  
   
   
