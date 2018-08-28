@@ -15,13 +15,15 @@ export class PersonelListComponent implements OnInit {
 
   employeForm: FormGroup;
   employes: Employe[];
+  employeObjet=null;
   employeSubscription: Subscription;
   constructor(private formBuilder: FormBuilder,
     private employesService: EmployesService,
-    private router: Router,
-    private _router: ActivatedRoute) { }
+    private router: Router
+    ) { }
 
   ngOnInit() {
+   
     this.employeSubscription = this.employesService.employeSubject.subscribe(
       (employes: Employe[]) => {
         this.employes=employes;
@@ -31,9 +33,13 @@ export class PersonelListComponent implements OnInit {
     // this.initForm();
   }
 
-  editEmploye(){
-    this.router.navigate(['personel/new/:id', this.employesService.employeSubject]);
+
+  editEmploye(employeItem){
+    debugger
+    this.router.navigate(['/personel/new', employeItem.id]);
   }
+
+
 
   
 

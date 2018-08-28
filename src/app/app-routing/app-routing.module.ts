@@ -30,7 +30,7 @@ import { authGuardService } from '../starter/services/auth-guard.service';
   imports: [
     RouterModule.forRoot([
      
-      { path: 'home',canActivate: [authGuardService], component: AccueilComponent },
+      { path: 'home', component: AccueilComponent },
       { path: 'personel',canActivate: [authGuardService], component: PersonelListComponent},
       { path: 'inscription',canActivate: [authGuardService], component: PersonalComponent},
       { path: 'auth/signin', component: SigninComponent},

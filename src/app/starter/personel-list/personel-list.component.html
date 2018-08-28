@@ -13,7 +13,7 @@
             <!-- <ul class="list-group"> -->
              <!-- <li class="list-group-item" *ngFor="let employe of employes"> -->
       <tr  *ngFor="let employe of employes; let i =index ">
-        <td>1</td>
+        <td>  {{employe.id}} </td>
         <td>  <!-- <img [src]="employe.image">  -->
           {{'&nbsp;&nbsp;&nbsp;' + employe.username }}</td>
         <td> {{employe.email }} </td>
@@ -23,7 +23,8 @@
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu">
                           <li><a routerLink="/information">Consulter</a></li>
-                          <li><a routerLink="personel/new/:id" (click)="editEmployee()" >Modifier</a></li>
+                          <li><a (click)="editEmploye(employe)" >Modifier
+                              </a></li>
                           <li><a routerLink="/comportement">Noter Comportement</a></li>
                           <li><a href="#">Supprimer</a></li>
                         </ul>
