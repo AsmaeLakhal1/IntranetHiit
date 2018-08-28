@@ -21,6 +21,7 @@ import { SigninComponent } from '../auth/signin/signin.component';
 import { SignupComponent } from '../auth/signup/signup.component';
 import { ComportementComponent } from '../starter/comportement/comportement.component';
 import { StatisticsComponent } from '../starter/statistics/statistics.component';
+
 import { ChartsComponent } from '../starter/statistics/charts/charts.component';
 import { authGuardService } from '../starter/services/auth-guard.service';
 
