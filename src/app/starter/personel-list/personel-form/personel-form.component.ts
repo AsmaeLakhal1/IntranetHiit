@@ -18,31 +18,48 @@ export class PersonelFormComponent implements OnInit{
   employeForm: FormGroup;
   defaultStatus = 'Developpeur';
   plainPassword: IPlainPassword;
+  employeObjet = null;
   // employes: Employe[];
   
   // employeSubscription: Subscription;
   constructor(private formBuilder: FormBuilder,
     private employesService: EmployesService,
-    private router: Router) { }
+    private router: Router,
+    private _router: ActivatedRoute) { }
 
   ngOnInit() {
-    
+    debugger
+    this._router.paramMap.subscribe(parameter =>{
+      const id = +parameter.get('id');
+      this.getEmploye(id);
+    })
+   // this.employeObjet = this.employesService.findById(1)
     this.initForm();
   }
+  private getEmploye(id: number){
+    // if(id === 0){
+    //   this.employe
+    // }
+    debugger
+
+    this.employeObjet = this.employesService.findById(id);
+    debugger
+  }
+
 
   initForm() {
     
     this.employeForm = this.formBuilder.group({
-      username: ['aaa', Validators.required],
-      civility: ['mr', Validators.required],
-      maritalStatus: ['married', Validators.required],
-      cnssNumber: ['111111111', Validators.required],
-      currentPosition: ['architecte', Validators.required],
-      email: ['aaa@zzz.com', Validators.required],
-      startDate : ['12/12/2000', Validators.required],
-      status: ['cdi', Validators.required],
-      plainPasswordFirst: ['ddd', Validators.required],
-      plainPasswordSecond: ['ddd', Validators.required],
+      username: ['', Validators.required],
+      civility: ['', Validators.required],
+      maritalStatus: ['', Validators.required],
+      cnssNumber: ['', Validators.required],
+      currentPosition: ['', Validators.required],
+      email: ['', Validators.required],
+      startDate : ['', Validators.required],
+      status: ['', Validators.required],
+      plainPasswordFirst: ['', Validators.required],
+      plainPasswordSecond: ['', Validators.required],
        
     });
   }

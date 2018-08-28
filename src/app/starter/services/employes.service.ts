@@ -144,6 +144,7 @@ export class EmployesService {
   }
 
   findById(id: number){
+    debugger
     const liste =this.employes.find(
       (employeeObject) => {
         return employeeObject.id === id;
@@ -152,6 +153,7 @@ export class EmployesService {
       }
       
     );
+    debugger
     return liste;
 
   }
