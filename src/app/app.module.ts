@@ -37,6 +37,13 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { authService } from './starter/services/auth.service';
 import { authGuardService } from './starter/services/auth-guard.service';
 import { DataService } from './starter/services/data.service';
+import { ComportementComponent } from './starter/comportement/comportement.component';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
+// import { MatStepper } from '@angular/material';
+import { MatSliderModule } from '@angular/material/slider';
+import { StatisticsComponent } from './starter/statistics/statistics.component';
+import { ChartsComponent } from './starter/statistics/charts/charts.component';
+
 
 
 
@@ -50,6 +57,12 @@ import { DataService } from './starter/services/data.service';
   
 
 // ];
+
+// @NgModule({
+//   exports: [
+//     MatSliderModule
+//   ]
+// })
 
 @NgModule({
   declarations: [
@@ -78,11 +91,9 @@ import { DataService } from './starter/services/data.service';
     AuthComponent,
     SigninComponent,
     SignupComponent,
-    
-    
-    
-   
-    
+    ComportementComponent,
+    StatisticsComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
@@ -90,9 +101,11 @@ import { DataService } from './starter/services/data.service';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    // RouterModule.forRoot(appRoutes)
+    BrowserAnimationsModule,
+    NoopAnimationsModule
   ],
   providers: [EmployesService, WorkflowService, WorkflowGuard,FormDataService, authService, authGuardService, DataService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

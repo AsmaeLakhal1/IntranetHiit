@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation, Input } from '@angular/core';
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
 import { DataService } from './starter/services/data.service';
 
 @Component({
@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'app';
   isAuth: boolean=false;
   constructor(private data: DataService){
+
 
     var config = {
       apiKey: "AIzaSyDLRjiT5YGu88Z8SLuxgy9VzNIAdBqyGfA",

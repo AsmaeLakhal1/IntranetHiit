@@ -1,0 +1,13 @@
+.chart {
+    border: solid;
+    height: 400;
+    width: 400;
+   
+}
+
+
+element.style {
+    display: block;
+    width: 200px;
+    height: 200px;
+}

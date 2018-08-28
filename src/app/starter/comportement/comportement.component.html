@@ -1,0 +1,132 @@
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>    (note sur 5)
+
+
+
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h4>Comportement et statistique</h4>
+    
+    
+    <br>
+    <form [formGroup]="employeForm" (ngSubmit)="onSubmitForm()">
+
+      <div>
+        <div class="form-group col-xs-6">
+          <label for="implication">Implication</label>
+          <input type="number" id="implication" class="form-control" formControlName="implication" required>
+          <label for="discretion">Discretion</label>
+          <input type="number" id="discretion" class="form-control" formControlName="discretion" required>
+
+
+          <label for="capaciteAdaptation">Capacité d'ataptation</label>
+          <input type="number" id="capaciteAdaptation" class="form-control" formControlName="capaciteAdaptation" required>
+          <label for="ponctualite">Ponctualité</label>
+          <input type="number" id="ponctualite" class="form-control" formControlName="ponctualite" required>
+          <!-- <div [formGroup]="passwordFormGroup">
+            <div class="form-group">
+                <label for="plainPasswordFirst">Password</label>
+                <input class="form-control" type="password" name="plainPasswordFirst" formControlName="plainPasswordFirst">
+            </div>
+            <p class="bg-danger" *ngIf="passwordFormGroup.controls.plainPasswordFirst.errors?.required && passwordFormGroup.controls.plainPasswordFirst.touched">Password is required</p>
+     
+            <div class="form-group">
+                <label for="plainPasswordSecond">Repeat Password</label>
+                <input class="form-control" type="password" name="plainPasswordSecond" formControlName="plainPasswordSecond">
+            </div>
+            <p class="bg-danger" *ngIf="passwordFormGroup.controls.plainPasswordSecond.errors?.required && passwordFormGroup.controls.plainPasswordSecond.touched">Repeat password is required</p>
+            <p class="bg-danger" *ngIf="passwordFormGroup.errors?.doesMatchPassword">Password does not match</p>
+     
+        </div> -->
+
+
+
+          <label for="contactClient">Contact client</label>
+          <input type="number" id="contactClient" class="form-control" formControlName="contactClient" required>
+         
+
+
+          <br>
+          <button class="btn btn-primary" type="submit" [disabled]="employeForm.invalid">Enregistrer
+          </button>
+        </div>
+
+        <div class="form-group col-xs-6">
+            <label for="rigueur">Rigueur</label>
+            <input type="number" id="rigueur" class="form-control" formControlName="rigueur" required>
+         
+
+          <label for="autonomie">Autonomie</label>
+          <input type="number" id="autonomie" class="form-control" formControlName="autonomie" required>
+         
+
+          <label for="espritEquipe">Esprit d'équipe</label>
+          <input type="number" id="espritEquipe" class="form-control" formControlName="espritEquipe" required>
+         
+          
+          <label for="initiative">Initiative</label>
+          <input type="number" id="initiative" class="form-control datepicker" formControlName="initiative" required>
+
+   
+          
+
+
+         <br> <br> <br> <a routerLink="/personel">Liste des employés</a>
+
+
+        </div>
+        <!-- <div class="form-group col-xs-12" >
+                  <label for="email">email</label>
+                  <input type="text" id="email"
+                         class="form-control" formControlName="email">
+                </div> -->
+      </div>
+      <div>
+
+      </div>
+
+
+    </form>
+  </div>
+</div>
+
+
+<!-- <div id="formulaire-responsive" class="clearfix">
+
+<div class="row" >
+    <div class="col-sm-8 col-sm-offset-2">
+      <h2>Enregistrer un nouvel employé</h2>
+      <form [formGroup]="employeForm" (ngSubmit)="onSubmitForm()">
+          <div class="rang-form">
+        <div class="form-group">
+          <label for="firstName">Prenom</label>
+          <input type="text" id="firstName"
+                 class="form-control" formControlName="firstName">
+        </div>
+      </div>
+      <div class="rang-form">
+        <div class="form-group">
+          <label for="lastName">Nom</label>
+          <input type="text" id="lastName"
+                 class="form-control" formControlName="lastName">
+        </div>
+      </div>
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="text" id="email"
+                   class="form-control" formControlName="email">
+          </div>
+        
+        <button class="btn btn-success" 
+                type="submit">Enregistrer
+        </button>
+  
+      </form>
+    </div>
+  </div> -->
