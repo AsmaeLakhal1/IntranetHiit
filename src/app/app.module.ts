@@ -43,6 +43,9 @@ import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-b
 import { MatSliderModule } from '@angular/material/slider';
 import { StatisticsComponent } from './starter/statistics/statistics.component';
 
+import { ChartsComponent } from './starter/statistics/charts/charts.component';
+
+
 
 
 
@@ -91,7 +94,10 @@ import { StatisticsComponent } from './starter/statistics/statistics.component';
     SigninComponent,
     SignupComponent,
     ComportementComponent,
-    StatisticsComponent
+
+    StatisticsComponent,
+    ChartsComponent
+
   ],
   imports: [
     BrowserModule,

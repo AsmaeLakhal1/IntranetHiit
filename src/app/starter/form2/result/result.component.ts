@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ResultComponent implements OnInit {
 
-  title = 'Thanks for staying tuned!';
+  title = 'Merci pour votre inscription';
   @Input() formData: FormData;
   isFormValid: boolean = false;
   
