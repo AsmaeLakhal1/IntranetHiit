@@ -21,28 +21,31 @@ import { SigninComponent } from '../auth/signin/signin.component';
 import { SignupComponent } from '../auth/signup/signup.component';
 import { ComportementComponent } from '../starter/comportement/comportement.component';
 import { StatisticsComponent } from '../starter/statistics/statistics.component';
-
 import { ChartsComponent } from '../starter/statistics/charts/charts.component';
 import { authGuardService } from '../starter/services/auth-guard.service';
+import { SingleEmpComponent } from '../starter/single-emp/single-emp.component';
 
 
 @NgModule({
   imports: [
     RouterModule.forRoot([
      
-      { path: 'home', component: AccueilComponent },
+      { path: 'home',canActivate: [authGuardService], component: AccueilComponent },
       { path: 'personel',canActivate: [authGuardService], component: PersonelListComponent},
       { path: 'inscription',canActivate: [authGuardService], component: PersonalComponent},
       { path: 'auth/signin', component: SigninComponent},
       { path: 'auth/signup', component: SignupComponent},
       { path: 'ess',canActivate: [authGuardService], component: NavbarComponent},
       { path: 'starter',canActivate: [authGuardService], component: PersonelFormComponent},
-      { path: 'information',canActivate: [authGuardService], component: PersonelInformationComponent},
+      { path: 'information/:id',canActivate: [authGuardService], component: PersonelInformationComponent},
       { path: 'personel/new/:id',canActivate: [authGuardService], component: PersonelFormComponent},
       { path: 'newProject',canActivate: [authGuardService], component: NewProjectComponent},
       { path: 'comportement',canActivate: [authGuardService], component: ComportementComponent},
       { path: 'statistics',canActivate: [authGuardService], component: StatisticsComponent },
       { path: 'charts',canActivate: [authGuardService], component: ChartsComponent},
+      { path: 'addEmployee', component: PersonelFormComponent},
+      { path: '', component: PersonelInformationComponent },
+      { path: 'singleEmpl/:id', component: SingleEmpComponent},
      
        // 1st Route
     { path: 'personal',canActivate: [authGuardService],  component: PersonalComponent },
@@ -51,13 +54,13 @@ import { authGuardService } from '../starter/services/auth-guard.service';
     // 3rd Route
     { path: 'address',  component: AddressComponent, canActivate: [WorkflowGuard] },
     // 4th Route
-    { path: 'result',  component: ResultComponent, canActivate: [WorkflowGuard] },
+    { path: 'result',  component: ResultComponent },
     // 5th Route
     // { path: '',   redirectTo: '/personal', pathMatch: 'full' },
     // 6th Route
     // { path: '**', component: PersonalComponent },
     { path: 'not-found', component: NotFoundComponent},
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    // { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', redirectTo: '/not-found'}
       
     ])

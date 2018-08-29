@@ -11,7 +11,6 @@ import { StarterFooterComponent } from './starter/starter-footer/starter-footer.
 import { StarterControlSidebarComponent } from './starter/starter-control-sidebar/starter-control-sidebar.component';
 import { PersonelListComponent } from './starter/personel-list/personel-list.component';
 import { PersonelFormComponent } from './starter/personel-list/personel-form/personel-form.component';
-import { SinglePersonelComponent } from './starter/personel-list/single-personel/single-personel.component';
 import { Routes, RouterModule } from '@angular/router';
 import {  ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { EmployesService } from './starter/services/employes.service';
@@ -44,6 +43,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { StatisticsComponent } from './starter/statistics/statistics.component';
 
 import { ChartsComponent } from './starter/statistics/charts/charts.component';
+import { SingleListComponent } from './single-list/single-list.component';
+import { SingleEmpComponent } from './starter/single-emp/single-emp.component';
 
 
 
@@ -77,7 +78,6 @@ import { ChartsComponent } from './starter/statistics/charts/charts.component';
     StarterControlSidebarComponent,
     PersonelListComponent,
     PersonelFormComponent,
-    SinglePersonelComponent,
     NotFoundComponent,
     AccueilComponent,
     PersonelInformationComponent,
@@ -94,9 +94,10 @@ import { ChartsComponent } from './starter/statistics/charts/charts.component';
     SigninComponent,
     SignupComponent,
     ComportementComponent,
-
     StatisticsComponent,
-    ChartsComponent
+    ChartsComponent,
+    SingleListComponent,
+    SingleEmpComponent
 
   ],
   imports: [

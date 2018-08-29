@@ -42,9 +42,9 @@ export class NewProjectComponent implements OnInit {
       this.saveProject();
     }
     saveProject() {
-        debugger
+        // debugger
         this.saveBtn.emit(this.address.projects);
-        debugger
+        // debugger
       }
 
 }
