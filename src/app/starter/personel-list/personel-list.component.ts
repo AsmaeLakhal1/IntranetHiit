@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Employe } from '../models/employe.model';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { Employe } from '../../interfaces/employe.interface';
 import { Router, ActivatedRoute } from '@angular/router';
 import { EmployesService } from '../services/employes.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -15,8 +15,10 @@ export class PersonelListComponent implements OnInit {
 
   employeForm: FormGroup;
   employes: Employe[];
-  employeObjet=null;
+  employeObjet: Employe;
   employeSubscription: Subscription;
+  @Input() id : number;
+  @Input() indexOfEmployee: number;
   constructor(private formBuilder: FormBuilder,
     private employesService: EmployesService,
     private router: Router
@@ -35,7 +37,7 @@ export class PersonelListComponent implements OnInit {
 
 
   editEmploye(employeItem){
-    debugger
+    
     this.router.navigate(['/personel/new', employeItem.id]);
   }
 

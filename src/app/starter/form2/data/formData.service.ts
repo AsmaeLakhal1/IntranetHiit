@@ -156,14 +156,14 @@ export class FormDataService {
     saveEmployeeToSerever(newEmplyee){
 
         let url = 'http://192.168.1.74:8000/intranet/api/employee-registration';
-        debugger
+        // debugger
         this.httpClient.post(url, newEmplyee)
                        .subscribe(
                          () =>{
                            console.log('enregistrement termine !');
                          },
                          (error) =>{
-                           debugger
+                        //    debugger
                            console.log('erreur de sauvgarde' + error)
                          }
                        );

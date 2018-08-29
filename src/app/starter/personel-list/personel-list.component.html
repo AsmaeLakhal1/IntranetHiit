@@ -12,7 +12,9 @@
     <tbody>
             <!-- <ul class="list-group"> -->
              <!-- <li class="list-group-item" *ngFor="let employe of employes"> -->
-      <tr  *ngFor="let employe of employes; let i =index ">
+      <tr  *ngFor="let employe of employes; let i =index "
+            [id]="employe.id"
+              >
         <td>  {{employe.id}} </td>
         <td>  <!-- <img [src]="employe.image">  -->
           {{'&nbsp;&nbsp;&nbsp;' + employe.username }}</td>
@@ -22,7 +24,7 @@
                         <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown">Choisir
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu">
-                          <li><a routerLink="/information">Consulter</a></li>
+                          <li><a [routerLink]="[id]">Consulter</a></li>
                           <li><a (click)="editEmploye(employe)" >Modifier
                               </a></li>
                           <li><a routerLink="/comportement">Noter Comportement</a></li>

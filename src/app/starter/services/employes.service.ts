@@ -144,7 +144,7 @@ export class EmployesService {
   }
 
   findById(id: number){
-    debugger
+    // debugger
     const liste =this.employes.find(
       (employeeObject) => {
         return employeeObject.id === id;
@@ -153,7 +153,7 @@ export class EmployesService {
       }
       
     );
-    debugger
+    // debugger
     return liste;
 
   }
@@ -161,14 +161,14 @@ export class EmployesService {
   saveEmployeeToSerever(newEmplyee){
 
 let url = 'http://192.168.1.74:8000/intranet/api/employee-registration';
-debugger
+// debugger
 this.httpClient.post(url, newEmplyee)
                .subscribe(
                  () =>{
                    console.log('enregistrement termine !');
                  },
                  (error) =>{
-                   debugger
+                  //  debugger
                    console.log('erreur de sauvgarde' + error)
                  }
                );

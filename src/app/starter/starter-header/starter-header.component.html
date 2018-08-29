@@ -155,7 +155,7 @@
             <!-- Menu Footer-->
             <li class="user-footer">
               <div class="pull-left">
-                <a href="#"  *ngIf="isAuth" class="btn btn-default btn-flat">Profil</a>
+                <a routerLink="information"  *ngIf="isAuth" class="btn btn-default btn-flat">Profil</a>
               </div>
               <div class="pull-right">
                 <a (click)="onSignOut()"
@@ -174,10 +174,10 @@
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li routerLinkActive="active" *ngIf="!isAuth">
-        <a routerLink="auth/signup">Créer un compte</a>
+        <a class="create2" routerLink="auth/signup"> <span class="create">Créer un compte</span> </a>
       </li>
       <li routerLinkActive="active" *ngIf="!isAuth">
-        <a   routerLink="auth/signin">Connexion</a>
+        <a  class="Connexion2"  routerLink="auth/signin"> <span class="connexion">Connexion</span> </a>
       </li>
    
     </ul>

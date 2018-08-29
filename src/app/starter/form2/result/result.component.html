@@ -2,23 +2,29 @@
   <h3 class="head text-center">{{title}}</h3>
   
   <p class="narrow text-center">
-      vous trouvez ici quelques informations que vous avez entré
+      vous trouvez ici quelques informations que vous avez entrées
   </p>
   <div class='row'>
       <div class='col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-8 col-md-offset-4 col-md-8'>
           <div class="row">
               <div class='col-xs-3 col-sm-2'>
                   <div class="form-group">
-                      <label class="control-label" for="lastName">Nom:  {{formData.lastName}} </label> 
+                      
                   </div>
+                  <div class='col-xs-3 col-sm-2'>
+                    
+                 <!-- {{ formData.name + ' ' + formData.startDateE}} -->
+             </div>
               </div>
-              <div class='col-xs-9 col-sm-10'>
-                     <label class="control-label" for="firstName">Prenom:  {{formData.firstName}} </label>
-                  <!-- {{ formData.name + ' ' + formData.startDateE}} -->
-              </div>
+              
           </div>
+          <label class="control-label" for="lastName"> <i>Nom : &nbsp;</i>  {{formData.lastName}} </label> 
+          <br> <br><label class="control-label" for="firstName"> <i>Prenom : &nbsp;</i>   {{formData.firstName}} </label>
 
-          <p> {{ formData.date}} </p>
+          <br> <br> <label class="control-label" for="city"> <i>N° Tel : &nbsp;</i>  {{formData.phoneNumber}} </label>
+          <br> <br> <label class="control-label" for="city"> <i>Date de début : &nbsp;</i>  {{formData.startDate}} </label>         
+
+          
           <!-- <div class="row">
               <div class='col-xs-3 col-sm-2'>
                   <div class="form-group">
@@ -54,7 +60,7 @@
       </div>
   </div>
   <div class="text-center">
-      <button class="btn btn-success btn-outline-rounded"  (click)="submit()"> Submit <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+      <button class="btn btn-success btn-outline-rounded"  (click)="submit()"> Términer <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
   </div>
 </div>
 

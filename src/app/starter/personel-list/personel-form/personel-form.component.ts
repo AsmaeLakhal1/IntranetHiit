@@ -8,6 +8,7 @@ import { IPlainPassword } from '../../../interfaces/plainPassword.interface';
 import { Employe } from '../../../interfaces/employe.interface';
 import { debug } from 'util';
 
+
 @Component({
   selector: 'app-personel-form',
   templateUrl: './personel-form.component.html',
@@ -18,8 +19,8 @@ export class PersonelFormComponent implements OnInit{
   employeForm: FormGroup;
   defaultStatus = 'Developpeur';
   plainPassword: IPlainPassword;
-  employeObjet = null;
-  // employes: Employe[];
+  employeObjet : Employe;
+  employes: Employe[];
   
   // employeSubscription: Subscription;
   constructor(private formBuilder: FormBuilder,
@@ -28,7 +29,7 @@ export class PersonelFormComponent implements OnInit{
     private _router: ActivatedRoute) { }
 
   ngOnInit() {
-    debugger
+    // debugger
     this._router.paramMap.subscribe(parameter =>{
       const id = +parameter.get('id');
       this.getEmploye(id);
@@ -40,10 +41,10 @@ export class PersonelFormComponent implements OnInit{
     // if(id === 0){
     //   this.employe
     // }
-    debugger
+    // debugger
 
     this.employeObjet = this.employesService.findById(id);
-    debugger
+    // debugger
   }
 
 

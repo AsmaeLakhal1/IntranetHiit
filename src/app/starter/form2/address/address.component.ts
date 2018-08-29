@@ -43,7 +43,7 @@ export class AddressComponent implements OnInit {
   }
 
   goToNext(form: any) {
-    debugger
+    // debugger
       if (this.save(form)) {
           // Navigate to the result page
           this.router.navigate(['/result']);
