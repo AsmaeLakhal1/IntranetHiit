@@ -45,6 +45,8 @@ import { StatisticsComponent } from './starter/statistics/statistics.component';
 import { ChartsComponent } from './starter/statistics/charts/charts.component';
 import { SingleListComponent } from './single-list/single-list.component';
 import { SingleEmpComponent } from './starter/single-emp/single-emp.component';
+import { SingleEmp2Component } from './starter/single-emp2/single-emp2.component';
+
 
 
 
@@ -97,7 +99,9 @@ import { SingleEmpComponent } from './starter/single-emp/single-emp.component';
     StatisticsComponent,
     ChartsComponent,
     SingleListComponent,
-    SingleEmpComponent
+    SingleEmpComponent,
+    SingleEmp2Component,
+    
 
   ],
   imports: [

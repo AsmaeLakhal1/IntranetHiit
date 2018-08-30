@@ -40,9 +40,17 @@ export class PersonelListComponent implements OnInit {
     
     this.router.navigate(['/personel/new', employeItem.id]);
   }
+  lastUpdate = new Promise((resolve, reject) => {
+    const date = new Date();
+    setTimeout(
+      () => {
+        resolve(date);
+      }, 2000
+    );
+  });
 
 
-
+  
   
 
 }

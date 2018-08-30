@@ -11,9 +11,9 @@ import { FormDataService } from '../form2/data/formData.service';
   styleUrls: ['./single-emp.component.css']
 })
 export class SingleEmpComponent implements OnInit {
-  id: number;
-  username: string;
-  email: string;
+  @Input() id: number;
+  @Input() username: string;
+  @Input() email: string;
   @Input() formData: FormData;
   
 
@@ -26,9 +26,9 @@ export class SingleEmpComponent implements OnInit {
     this.formData = this.formDataService.getFormData();
     const id = this.route.snapshot.params['id'];
    //  this.firstName = this.employeService.findById(+id).firstName;
-    this.id = this.employeService.findById(+id).id;
-    this.username = this.employeService.findById(+id).username;
-    this.email = this.employeService.findById(+id).email;
+    // this.id = this.employeService.findById(+id).id;
+    // this.username = this.employeService.findById(+id).username;
+    // this.email = this.employeService.findById(+id).email;
     
   }
 
