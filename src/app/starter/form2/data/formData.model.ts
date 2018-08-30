@@ -4,32 +4,32 @@ import { Projects } from "../../../interfaces/projects.interface";
 import { Formations } from "../../../interfaces/formations.interface";
 
 export class FormData {
-    firstName: string = '';
-    lastName : string = '';
-    language: number=null;
-    level2: string='';
-    level: number=null;
-    startDate:Date= new Date();
-    endDate:Date= new Date();
-    organization: string='';
-    country: string='';
-    diploma: string='';
-    speciality: string=''; 
-    birthday: Date=new Date();
-    phoneNumber: number=null;
-    address: string='';
-    position: string='';
-    descriptionE: string='';
-    startDateE:Date=new Date();
-    endDateE:Date=new Date();
-    cityE:string='';
-    countryE:string='';
-    employer:string='';
-    name: string='';
-    date:Date=new Date();
-    descriptoinP:string='';
-    dependentChild: number=null;
-    project: Projects;
+    firstName?: string = '';
+    lastName ?: string = '';
+    language?: number=null;
+    level2?: string='';
+    level?: number=null;
+    startDate?:Date= new Date();
+    endDate?:Date= new Date();
+    organization?: string='';
+    country?: string='';
+    diploma?: string='';
+    speciality?: string=''; 
+    birthday?: Date=new Date();
+    phoneNumber?: number=null;
+    address?: string='';
+    position?: string='';
+    descriptionE?: string='';
+    startDateE?:Date=new Date();
+    endDateE?:Date=new Date();
+    cityE?:string='';
+    countryE?:string='';
+    employer?:string='';
+    name?: string='';
+    date?:Date=new Date();
+    descriptoinP?:string='';
+    dependentChild?: number=null;
+    project?: Projects;
     
 
     clear() {

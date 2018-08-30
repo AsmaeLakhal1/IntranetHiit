@@ -23,6 +23,7 @@ export class FormDataService {
     constructor(private workflowService: WorkflowService,
         private httpClient: HttpClient) { 
     }
+    
 
     getPersonal(): Personal {
         // Return the Personal data

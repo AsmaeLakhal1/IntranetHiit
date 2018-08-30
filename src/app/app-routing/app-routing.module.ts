@@ -37,7 +37,7 @@ import { SingleEmpComponent } from '../starter/single-emp/single-emp.component';
       { path: 'auth/signup', component: SignupComponent},
       { path: 'ess',canActivate: [authGuardService], component: NavbarComponent},
       { path: 'starter',canActivate: [authGuardService], component: PersonelFormComponent},
-      { path: 'information/:id',canActivate: [authGuardService], component: PersonelInformationComponent},
+      { path: 'personel/:id',canActivate: [authGuardService], component: PersonelInformationComponent},
       { path: 'personel/new/:id',canActivate: [authGuardService], component: PersonelFormComponent},
       { path: 'newProject',canActivate: [authGuardService], component: NewProjectComponent},
       { path: 'comportement',canActivate: [authGuardService], component: ComportementComponent},

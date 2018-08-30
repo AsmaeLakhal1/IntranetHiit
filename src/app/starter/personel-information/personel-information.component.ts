@@ -11,8 +11,16 @@ import { EmployesService } from '../services/employes.service';
 })
 export class PersonelInformationComponent implements OnInit {
   @Input() formData: FormData;
-  firstName: string = 'Asm';
   username: string;
+  firstName: string;
+  currentPosition: string;
+  email: string;
+  status: string;
+  phoneNumber: number;
+
+  
+
+
   constructor(private formDataService: FormDataService,
               private employeService: EmployesService,
                private router: Router,
@@ -20,9 +28,14 @@ export class PersonelInformationComponent implements OnInit {
 
   ngOnInit() {
     this.formData = this.formDataService.getFormData();
+    console.log(this.formData = this.formDataService.getFormData());
    const id = this.route.snapshot.params['id'];
-  //  this.firstName = this.employeService.findById(+id).firstName;
+   this.firstName = this.employeService.findById(+id).firstName;
    this.username = this.employeService.findById(+id).username;
+   this.currentPosition = this.employeService.findById(+id).currentPosition;
+   this.email = this.employeService.findById(+id).email;
+   this.status = this.employeService.findById(+id).status;
+   this.phoneNumber = this.employeService.findById(+id).phoneNumber;
     
   }
 
