@@ -15,11 +15,13 @@ export class EmployesService {
   private employes: Array<Employe> = [
     {
       id: 1,
-      username: 'lakhal',
+      phoneNumber: 622114455,
+      firstName: 'Asmae',
+      username: 'LAKHAL',
       email: 'aaa@aaa.com',
       civility: 'melle',
       maritalStatus: 'celibataire',
-      currentPosition: 'developpeur',
+      currentPosition: 'Architecte',
       cnssNumber: 1212,
       startDate: new Date(),
       status: 'cdd',
@@ -39,6 +41,64 @@ export class EmployesService {
         espritEquipe: 3,
         initiative: 5
       },
+      
+      {
+        annee: 2017,
+        implication: 3,
+        discretion: 2,
+        capaciteAdaptation: 4,
+        ponctualite: 2,
+        contactClient: 3,
+        rigueur: 4,
+        autonomie: 2,
+        espritEquipe: 3,
+        initiative: 5
+      },
+      {
+        annee: 2018,
+        implication: 5,
+        discretion: 4,
+        capaciteAdaptation: 2,
+        ponctualite: 2,
+        contactClient: 3,
+        rigueur: 3,
+        autonomie: 5,
+        espritEquipe: 5,
+        initiative: 5
+      }
+    ],
+      
+      
+    },
+    {
+      id: 2,
+      phoneNumber: 655889955,
+      firstName: 'Hajar',
+      username: 'KAMAL',
+      email: 'hhh@hhh.com',
+      civility: 'melle',
+      maritalStatus: 'celibataire',
+      currentPosition: 'Developpeur',
+      cnssNumber: 1212,
+      startDate: new Date(),
+      status: 'cdd',
+      plainPassword: {
+        first : 'ok',
+        second : 'ok'
+      },
+      comportement:[ {
+        annee: 2016,
+        implication: 2,
+        discretion: 5,
+        capaciteAdaptation: 4,
+        ponctualite: 4,
+        contactClient: 1,
+        rigueur: 2,
+        autonomie: 4,
+        espritEquipe: 3,
+        initiative: 5
+      },
+      
       {
         annee: 2017,
         implication: 3,
@@ -68,13 +128,16 @@ export class EmployesService {
       
     },
 
+
     {
-      id: 2,
-      username: 'ihasiika',
+      id: 3,
+      phoneNumber: 622114455,
+      firstName: 'Sara',
+      username: 'IHASIKA ',
       email: 'sss@sss.com',
       civility: 'melle',
       maritalStatus: 'celibataire',
-      currentPosition: 'developpeur',
+      currentPosition: 'Developpeur',
       cnssNumber: 1212,
       startDate: new Date(),
       status: 'cdd',

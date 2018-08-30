@@ -1,14 +1,25 @@
 <div class="col-XS-12">
-    <h2>Mes appareils</h2>
+    <h2>Listes des employés</h2>
     
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mis à jour : {{ lastUpdate | async | date: 'short' | uppercase }}</p>
+   <br> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mis à jour : {{ lastUpdate | async | date: 'short' | uppercase }}</p>
     <ul class="list-group">
+      <table class="table table-striped" >
+        <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+        </table>
       <!-- <app-premier></app-premier> -->
-      <app-single-emp *ngFor="let liste of employes; let i = index"
+     <br> <app-single-emp *ngFor="let liste of employes; let i = index"
        [id]="liste.id"
        [email]="liste.email"
        [username]="liste.username"
-       [id]="liste.id" ></app-single-emp>
+       
+        ></app-single-emp>
   
     </ul>
   
