@@ -14,7 +14,7 @@
         </table>
       <!-- <app-premier></app-premier> -->
      <br> <app-single-emp *ngFor="let liste of employes; let i = index"
-       
+       [id]="liste.id"
        [email]="liste.email"
        [username]="liste.username"
        

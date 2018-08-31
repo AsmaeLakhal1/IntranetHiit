@@ -44,7 +44,7 @@ import { SingleEmpComponent } from '../starter/single-emp/single-emp.component';
       { path: 'statistics',canActivate: [authGuardService], component: StatisticsComponent },
       { path: 'charts',canActivate: [authGuardService], component: ChartsComponent},
       { path: 'addEmployee', component: PersonelFormComponent},
-      { path: '', component: PersonelInformationComponent },
+      { path: '', component: AccueilComponent},
       { path: 'singleEmpl/:id', component: SingleEmpComponent},
      
        // 1st Route
