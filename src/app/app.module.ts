@@ -55,6 +55,7 @@ import { SingleEmp2Component } from './starter/single-emp2/single-emp2.component
 
 
 
+
 // const appRoutes: Routes= [
 //   { path: 'personel/new', component: PersonelFormComponent},
 //   { path: '', redirectTo: 'personel/new', pathMatch: 'full' },
@@ -101,6 +102,7 @@ import { SingleEmp2Component } from './starter/single-emp2/single-emp2.component
     SingleListComponent,
     SingleEmpComponent,
     SingleEmp2Component,
+ 
     
 
   ],
@@ -114,7 +116,8 @@ import { SingleEmp2Component } from './starter/single-emp2/single-emp2.component
     NoopAnimationsModule
   ],
   providers: [EmployesService, WorkflowService, WorkflowGuard,FormDataService, authService, authGuardService, DataService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 
 export class AppModule { }

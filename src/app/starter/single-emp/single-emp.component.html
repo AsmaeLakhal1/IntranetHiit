@@ -5,7 +5,7 @@
            <!-- <li class="list-group-item" *ngFor="let employe of employes"> -->
     <tr 
             >
-      <td>  {{id}} </td>
+      <!-- <td>  {{id}} </td> -->
       <td>  <!-- <img [src]="employe.image">  -->
         {{'&nbsp;&nbsp;&nbsp;' + username }}</td>
       <td> {{email }} </td>
@@ -18,7 +18,7 @@
                         <li><a  >Modifier
                             </a></li>
                         <li><a routerLink="/comportement">Noter Comportement</a></li>
-                        <li><a (click)="deleteEmployee(id)">Supprimer</a></li>
+                        <li><a (click)="delete(id)">Supprimer</a></li>
                       </ul>
                   
                     </div>

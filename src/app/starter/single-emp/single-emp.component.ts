@@ -41,7 +41,15 @@ export class SingleEmpComponent implements OnInit {
       this.employeService.getEmployees().splice(index,1);
     }
 
+    
+
 
   }
+
+  delete(id: number){
+    if(window.confirm('voulez vous vraiment effectuer cette opération ?')){
+    this.deleteEmployee(id);
+   }
+}
 
 }
