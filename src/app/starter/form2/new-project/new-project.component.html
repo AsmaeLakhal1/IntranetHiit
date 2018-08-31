@@ -9,7 +9,7 @@
               <label class="control-label" for="name">Nom du Projet</label>
               <input class="form-control input-md" #name="ngModel" required id="name" name="name" type="text" placeholder="nom du projet"
                 [(ngModel)]="address.projects.name">
-              <div class="alert alert-danger" [hidden]="name.valid">Champ obligatoire</div>
+              <div class="alert alert-info" [hidden]="name.valid">Champ obligatoire</div>
             </div>
           </div>
           <div class='col-xs-12 col-sm-6'>
@@ -17,7 +17,7 @@
               <label class="control-label" for="date">Date de projet</label>
               <input class="form-control input-md" #date="ngModel" required id="date" name="date" type="date" placeholder="Date de Projet"
                 [(ngModel)]="address.projects.date">
-              <div class="alert alert-danger" [hidden]="date.valid">Champ obligatoire</div>
+              <div class="alert alert-info" [hidden]="date.valid">Champ obligatoire</div>
             </div>
           </div>
         </div>
@@ -25,7 +25,7 @@
           <label class="control-label" for="description">Description</label>
           <input class="form-control input-md" #description="ngModel" required id="description" name="description" type="text" placeholder="Description"
             [(ngModel)]="address.projects.description">
-          <div class="alert alert-danger" [hidden]="description.valid">Champ Obligatoire</div>
+          <div class="alert alert-info" [hidden]="description.valid">Champ Obligatoire</div>
         </div>
 
 

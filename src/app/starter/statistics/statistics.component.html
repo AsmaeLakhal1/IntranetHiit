@@ -12,7 +12,7 @@
             <!-- <ul class="list-group"> -->
              <!-- <li class="list-group-item" *ngFor="let employe of employes"> -->
       <tr  *ngFor="let employe of employes; let i =index ">
-        <td>1</td>
+        <td> {{employe.id}} </td>
         <td>  <!-- <img [src]="employe.image">  -->
           {{'&nbsp;&nbsp;&nbsp;' + employe.username }}</td>
         <td> <a routerLink="/charts">Consulter</a> </td>

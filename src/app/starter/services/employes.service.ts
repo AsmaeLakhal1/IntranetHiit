@@ -198,12 +198,16 @@ export class EmployesService {
     this.employes.push(newEmploye);
     this.emitEmploye();
   }
+  
 
   createNewComportement(newComportement: Comportement){
 
     
 
 
+  }
+  getEmployees(){
+    return this.employes;
   }
 
   findById(id: number){

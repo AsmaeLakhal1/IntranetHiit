@@ -25,7 +25,7 @@ export class ResultComponent implements OnInit {
   }
 
   submit() {
-      alert('Excellent Job!');
+      alert('Inscription réussie  !!');
       this.formData = this.formDataService.resetFormData();
       this.isFormValid = false;
       this.sendDataToServer(this.formData);
