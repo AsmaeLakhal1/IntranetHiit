@@ -6,7 +6,6 @@
       <table class="table table-striped" >
         <thead>
             <tr>
-              <th>ID</th>
               <th>Nom</th>
               <th>Email</th>
               <th>Action</th>
@@ -15,11 +14,13 @@
         </table>
       <!-- <app-premier></app-premier> -->
      <br> <app-single-emp *ngFor="let liste of employes; let i = index"
-       [id]="liste.id"
+       
        [email]="liste.email"
        [username]="liste.username"
        
         ></app-single-emp>
+
+        <a routerLink="/personel/new/0" >Ajouter un employe</a>
   
     </ul>
   

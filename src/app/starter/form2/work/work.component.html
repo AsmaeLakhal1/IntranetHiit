@@ -35,14 +35,14 @@
                     <div class="form-group">
                         <label class="control-label" for="speciality">Spécialité</label>  
                         <input class="form-control input-md" #speciality="ngModel" required id="speciality" name="speciality" type="text" placeholder="Spécialité" [(ngModel)]="work.formations.speciality">   
-                        <div class="alert alert-danger" [hidden]="speciality.valid">Champs Obligatoire</div>
+                        <div class="alert alert-info" [hidden]="speciality.valid">Champs Obligatoire</div>
                     </div>
 
                    
                   <div class="form-group">
                     <label class="control-label" for="country">Pays</label>  
                     <input class="form-control input-md" #country="ngModel" required id="country" name="country" type="text" placeholder="Pays" [(ngModel)]="work.formations.country">
-                    <div class="alert alert-danger" [hidden]="country.valid">Champs Obligatoire</div>
+                    <div class="alert alert-info" [hidden]="country.valid">Champs Obligatoire</div>
                 </div>
 
                 <!-- <label for="language">Langue</label>
@@ -92,13 +92,13 @@
                     <div class="form-group">
                         <label class="control-label" for="diploma">Diplome</label>  
                         <input class="form-control input-md" #diploma="ngModel" required id="diploma" name="diploma" type="text" placeholder="Diplome" [(ngModel)]="work.formations.diploma">
-                        <div class="alert alert-danger" [hidden]="diploma.valid">Champs Obligatoire</div>
+                        <div class="alert alert-info" [hidden]="diploma.valid">Champs Obligatoire</div>
                     </div>
 
                   <div class="form-group">
                     <label class="control-label" for="startDate">Date De Début</label>
                     <input class="form-control input-md" #startDate="ngModel" required id="startDate" name="startDate" type="date" placeholder="Date de Début" [(ngModel)]="work.formations.startDate">
-                    <div class="alert alert-danger" [hidden]="startDate.valid">Champs Obligatoire</div>
+                    <div class="alert alert-info" [hidden]="startDate.valid">Champs Obligatoire</div>
                 </div>
                 
                 <!-- <div class="form-group">
@@ -129,13 +129,13 @@
                     <div class="form-group">
                         <label class="control-label" for="organization">Organisation</label>  
                         <input class="form-control input-md" #organization="ngModel" required id="organization" name="organization" type="text" placeholder="Organisation" [(ngModel)]="work.formations.organization">
-                        <div class="alert alert-danger" [hidden]="organization.valid">Champs Obligatoire</div>
+                        <div class="alert alert-info" [hidden]="organization.valid">Champs Obligatoire</div>
                     </div>
                    
                     <div class="form-group">
                         <label class="control-label" for="endDate">Date De Fin</label>
                         <input class="form-control input-md" #endDate="ngModel" required id="endDate" name="endDate" type="date" placeholder="Date de Fin" [(ngModel)]="work.formations.endDate">
-                        <div class="alert alert-danger" [hidden]="endDate.valid">Champs Obligatoire</div>
+                        <div class="alert alert-info" [hidden]="endDate.valid">Champs Obligatoire</div>
     
                     </div>
                     <!-- <div class="form-group">

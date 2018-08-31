@@ -15,10 +15,10 @@
                       <span class="caret"></span></button>
                       <ul class="dropdown-menu">
                         <li><a [routerLink]="[id]">Consulter</a></li>
-                        <li><a (click)="editEmploye(employe)" >Modifier
+                        <li><a  >Modifier
                             </a></li>
                         <li><a routerLink="/comportement">Noter Comportement</a></li>
-                        <li><a href="#">Supprimer</a></li>
+                        <li><a (click)="deleteEmployee(id)">Supprimer</a></li>
                       </ul>
                   
                     </div>
